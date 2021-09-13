@@ -25,12 +25,9 @@
   <body>
       <!-- HEADER -->
     <header class="header", id = "header">
-        <nav class="nav container navbar expand lg">
-            <a href="#" class="nav_logo navbar-brand ml-3">
-                Header
-            </a>
-            <button class="navbar-toggler", type="button" data-toggle ="collapse" data-target="navbar-default"
-                    aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="nav container navbar-expand-lg">
+            <a href="#" class="nav_logo navbar-brand ml-3">Header</a>
+            <button class="navbar-toggler", type="button" data-toggle ="collapse" data-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -72,6 +69,15 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+
+            <div class="nav_btns">
+                <!-- THEME CHANGING BUTTONS -->
+                <i data-mode="dark" class="uit uit-toggle-off" id="theme-button"></i>
+
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
             </div>
         </nav>
     </header>
