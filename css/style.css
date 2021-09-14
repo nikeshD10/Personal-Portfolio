@@ -71,7 +71,7 @@ font-family: 'Roboto Mono', monospace;
 
 
 /* FONT SIZE FOR LARGER DEVICES */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 968px) {
     :root {
         --big-font-size: 3rem;
         --h1-font-size: 2.5rem;
@@ -111,6 +111,7 @@ body.dark-theme{
     padding-left: var(--mb-0-5);
     margin: 0;
     margin-top: -5px;
+    gap: var(--ab-0-75);
 }
 
 .change-theme{
@@ -189,12 +190,12 @@ img{
 
 /* =================    LAYOUT =================== */
 .container{
-    margin-right: var(--mb-1);
+    margin-right: var(--mb-0-25);
 }
 
 .grid {
     display: grid;
-}
+} 
 
 .header{
     width: 100%;
@@ -204,16 +205,18 @@ img{
     right: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
+    margin-right: var(--mb-0-25);
 }
 
 /* =============    NAV STYLING     =================== */
 .nav{
-    /* max-width: 960px */
+    max-width: 968px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 0;
+    margin-left: var(--mb-0-5);
+    margin-right: var(--mb-0-5);
 }
 
 
@@ -250,7 +253,61 @@ img{
         width: 100%;
         background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .5s;
     }
+}
+
+.nav_list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav_link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+
+.nav_link:hover{
+    color: var(--first-color);
+}
+
+.nav_icon{
+    font-size: 1.2rem;
+}
+
+.nav_close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+}
+
+.nav_close:hover{
+    color: var(--first-color-alt);
+}
+
+/* SHOW MENU */
+.show-menu{
+    bottom: 0;
+}
+
+/* Active link */
+.active-link{
+    color: var(--first-color);
+}
+ 
+/* Change background header */
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 
